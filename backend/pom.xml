@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.amigos</groupId>
-    <artifactId>amigos-profsdevcourse</artifactId>
+    <artifactId>amigoscode-api</artifactId>
     <version>1.0.1</version>
-    <name>amigos-profsdevcourse</name>
-    <description>amigos-profsdevcourse</description>
+    <name>amigoscode-api</name>
+    <description>amigoscode-api</description>
     <url/>
     <licenses>
         <license/>
@@ -28,6 +28,9 @@
     </scm>
     <properties>
         <java.version>17</java.version>
+        <docker.username></docker.username>
+        <docker.image.name>amigoscode-api</docker.image.name>
+        <docker.image.tag/>
     </properties>
     <dependencies>
         <dependency>
@@ -214,8 +217,10 @@
                         <image>eclipse-temurin:21</image>
                     </from>
                     <to>
-                        <image>zaharchuk90/${project.artifactId}:${project.version}</image>
-                        <image>zaharchuk90/${project.artifactId}:latest</image>
+                        <image>zaharchuk90/${docker.image.name}:${docker.image.tag}</image>
+                        <tags>
+                            <tag>latest</tag>
+                        </tags>
                     </to>
                 </configuration>
                 <executions>
