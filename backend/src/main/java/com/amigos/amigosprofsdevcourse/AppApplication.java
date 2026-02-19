@@ -10,13 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.util.TimeZone;
 
 @SpringBootApplication
@@ -24,6 +18,8 @@ public class AppApplication {
     public static void main(String[] args) {
         TimeZone.setDefault(TimeZone.getTimeZone("Europe/Kyiv"));
         ConfigurableApplicationContext run = SpringApplication.run(AppApplication.class, args);
+
+
 
 //        System.out.println(run.getEnvironment());
 //        System.out.println(Arrays.toString(run.getBeanDefinitionNames()));
