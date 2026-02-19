@@ -1,0 +1,35 @@
+services:
+  postgres-db:
+    container_name: postgres-db
+    image: postgres
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: customer
+      PGDATA: /data/postgres
+      PGTZ: Europe/Kiev
+    volumes:
+      - postgres-db:/data/postgres-db
+    ports:
+      - "5432:5432"
+    networks:
+      - postgres-db
+    restart: unless-stopped
+  amigoscode-api:
+    container_name: amigoscode-api
+    image: zaharchuk90/amigos-profsdevcourse
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+    ports:
+      - "8088:8080"
+    networks:
+      - postgres-db
+    depends_on:
+      - postgres-db
+    restart: unless-stopped
+networks:
+  postgres-db:
+    driver: bridge
+
+volumes:
+  postgres-db:

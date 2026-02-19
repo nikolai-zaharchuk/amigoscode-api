@@ -1,0 +1,20 @@
+server:
+  port: 8080
+spring:
+  main:
+    web-application-type: servlet
+  web:
+    error:
+       include-message: always
+  datasource:
+    url: jdbc:postgresql://postgres-db:5432/postgres
+    username: admin
+    password: admin
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true
