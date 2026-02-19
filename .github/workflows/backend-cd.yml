@@ -51,6 +51,7 @@ jobs:
           distribution: 'temurin'
           java-version: '21'
           cache: 'maven'
+          cache-dependency-path: backend/pom.xml
 
       - name: Set build number
         id: build-number
