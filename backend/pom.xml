@@ -30,7 +30,7 @@
         <java.version>17</java.version>
         <docker.username></docker.username>
         <docker.image.name>amigoscode-api</docker.image.name>
-        <docker.image.tag/>
+        <docker.image.tag>1.1.0</docker.image.tag>
     </properties>
     <dependencies>
         <dependency>
@@ -219,7 +219,7 @@
                     <to>
                         <image>zaharchuk90/${docker.image.name}:${docker.image.tag}</image>
                         <tags>
-                            <tag>latest</tag>
+                            <tag>latest1</tag>
                         </tags>
                     </to>
                 </configuration>
