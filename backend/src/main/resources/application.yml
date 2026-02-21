@@ -1,5 +1,9 @@
 server:
   port: 8080
+
+allowed-origins: '*'
+allowed-methods: '*'
+
 spring:
   main:
     web-application-type: servlet

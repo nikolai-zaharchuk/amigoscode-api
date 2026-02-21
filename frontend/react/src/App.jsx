@@ -2,24 +2,22 @@ import {use, useEffect, useState} from "react";
 import UserProfile from "./UserProfile.jsx";
 
 import SidebarWithHeader from "./shared/SideBar.jsx";
+import {getCustomers} from "./services/client.js";
 
 
-//
-// const UserProfiles = ({users}) => (
-//   <div>
-//     {
-//       users.map((user,  index) => (
-//           <UserProfile
-//             key={index}
-//             name={user.name}
-//             age={user.age}
-//             gender={user.gender}
-//           />
-//       ))}
-//   </div>
-// );
+
+
 
 function App() {
+
+  useEffect(() => {
+    getCustomers().then(response => {
+      console.log(response)
+    }).catch(err => {
+      console.log(err)
+    })
+  }, []);
+
 
   return (
     <SidebarWithHeader/>
