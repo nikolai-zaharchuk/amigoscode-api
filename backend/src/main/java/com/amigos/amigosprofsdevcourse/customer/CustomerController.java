@@ -17,6 +17,11 @@ public class CustomerController {
 
     @GetMapping
     public List<Customer> getCustomers() {
+        try {
+            Thread.sleep(1100);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         return customerService.getAllCustomers();
     }
 

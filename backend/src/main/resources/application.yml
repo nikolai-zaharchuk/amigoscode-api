@@ -1,8 +1,9 @@
 server:
   port: 8080
 
-allowed-origins: '*'
-allowed-methods: '*'
+cors:
+  allowed-origins: '*'
+  allowed-methods: '*'
 
 spring:
   main:
